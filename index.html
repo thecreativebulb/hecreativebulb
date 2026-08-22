@@ -520,7 +520,9 @@ footer{background:var(--plum-950);color:rgba(243,240,233,.6);padding:64px 0 32px
       </div>
 
       <div class="reveal">
-        <form id="briefForm">
+        <form id="briefForm" name="project-brief" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="project-brief">
+          <p style="display:none;"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
           <div class="chip-group">
             <label class="glabel">Project type</label>
             <div class="chips" data-group="type">
@@ -540,25 +542,28 @@ footer{background:var(--plum-950);color:rgba(243,240,233,.6);padding:64px 0 32px
               <button type="button" class="chip">Social reels</button>
             </div>
           </div>
+          <input type="hidden" name="project-type" id="projectTypeField">
+          <input type="hidden" name="deliverables" id="deliverablesField">
           <div class="field">
             <label for="loc">Location</label>
-            <input id="loc" type="text" placeholder="City, state">
+            <input id="loc" name="location" type="text" placeholder="City, state">
           </div>
           <div class="field">
             <label for="name">Your name</label>
-            <input id="name" type="text" placeholder="Full name">
+            <input id="name" name="name" type="text" placeholder="Full name">
             <span class="err" id="nameErr">Enter your name</span>
           </div>
           <div class="field">
             <label for="contact">Phone or email</label>
-            <input id="contact" type="text" placeholder="Where we should reach you">
+            <input id="contact" name="contact" type="text" placeholder="Where we should reach you">
             <span class="err" id="contactErr">Enter a phone number or email</span>
           </div>
           <div class="field">
             <label for="notes">Project notes</label>
-            <textarea id="notes" placeholder="Timeline, number of days, anything else we should know"></textarea>
+            <textarea id="notes" name="notes" placeholder="Timeline, number of days, anything else we should know"></textarea>
           </div>
           <button type="submit" class="btn btn-solid" style="width:100%;justify-content:center;">Send project brief</button>
+          <p class="err" id="submitErr">Something went wrong sending this — please WhatsApp or email us directly using the details alongside this form.</p>
         </form>
         <div class="brief-success" id="briefSuccess">
           <h4>Brief captured.</h4>
@@ -727,12 +732,39 @@ document.addEventListener('DOMContentLoaded', function(){
     var contactEl=document.getElementById('contact');
     var nameErr=document.getElementById('nameErr');
     var contactErr=document.getElementById('contactErr');
+    var submitErr=document.getElementById('submitErr');
     var valid=true;
     if(nameEl.value.trim()===''){nameErr.classList.add('show');valid=false;}else{nameErr.classList.remove('show');}
     if(contactEl.value.trim()===''){contactErr.classList.add('show');valid=false;}else{contactErr.classList.remove('show');}
     if(!valid)return;
-    form.style.display='none';
-    document.getElementById('briefSuccess').classList.add('show');
+
+    submitErr.classList.remove('show');
+    document.getElementById('projectTypeField').value=
+      Array.from(document.querySelectorAll('.chips[data-group="type"] .chip.sel')).map(function(c){return c.textContent;}).join(', ');
+    document.getElementById('deliverablesField').value=
+      Array.from(document.querySelectorAll('.chips[data-group="deliverable"] .chip.sel')).map(function(c){return c.textContent;}).join(', ');
+
+    var submitBtn=form.querySelector('button[type="submit"]');
+    submitBtn.disabled=true;
+    submitBtn.textContent='Sending…';
+
+    var data=new FormData(form);
+    var encoded=new URLSearchParams();
+    data.forEach(function(value,key){encoded.append(key,value);});
+
+    fetch('/', {
+      method:'POST',
+      headers:{'Content-Type':'application/x-www-form-urlencoded'},
+      body: encoded.toString()
+    }).then(function(res){
+      if(!res.ok) throw new Error('Network response was not ok');
+      form.style.display='none';
+      document.getElementById('briefSuccess').classList.add('show');
+    }).catch(function(){
+      submitBtn.disabled=false;
+      submitBtn.textContent='Send project brief';
+      submitErr.classList.add('show');
+    });
   });
   ['name','contact'].forEach(function(id){
     document.getElementById(id).addEventListener('input',function(){
