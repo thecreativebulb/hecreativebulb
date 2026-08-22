@@ -1,0 +1,56 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Everyone who edits content must be an invited Netlify Identity user —
+# see the README for how to lock this down to just you.
+publish_mode: simple
+
+media_folder: "assets"
+public_folder: "/assets"
+
+collections:
+  - name: "site"
+    label: "Website Content"
+    files:
+      - file: "content/data.json"
+        label: "Homepage Content"
+        name: "homepage"
+        fields:
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow tag line", name: "eyebrow", widget: "string" }
+              - { label: "Headline (first line)", name: "headline_main", widget: "string" }
+              - { label: "Headline (highlighted line)", name: "headline_em", widget: "string" }
+              - { label: "Subtext", name: "subtext", widget: "text" }
+              - { label: "Stat 1 number", name: "stat1_num", widget: "string" }
+              - { label: "Stat 1 label", name: "stat1_label", widget: "string" }
+              - { label: "Stat 2 number", name: "stat2_num", widget: "string" }
+              - { label: "Stat 2 label", name: "stat2_label", widget: "string" }
+              - { label: "Stat 3 number", name: "stat3_num", widget: "string" }
+              - { label: "Stat 3 label", name: "stat3_label", widget: "string" }
+              - { label: "Stat 4 number", name: "stat4_num", widget: "string" }
+              - { label: "Stat 4 label", name: "stat4_label", widget: "string" }
+          - label: "Contact Details"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "WhatsApp number (as shown)", name: "whatsapp_display", widget: "string" }
+              - { label: "WhatsApp link (https://wa.me/91...)", name: "whatsapp_link", widget: "string" }
+              - { label: "Email address", name: "email", widget: "string" }
+              - { label: "Location text", name: "location", widget: "string" }
+          - label: "Showreel Videos"
+            name: "videos"
+            widget: "list"
+            fields:
+              - { label: "YouTube Video ID (the part after v= or youtu.be/)", name: "id", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+          - label: "About Section"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Paragraph 1", name: "paragraph1", widget: "text" }
+              - { label: "Paragraph 2", name: "paragraph2", widget: "text" }
+          - { label: "Footer tagline", name: "footer_tagline", widget: "string" }
