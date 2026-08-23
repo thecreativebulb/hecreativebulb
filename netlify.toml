@@ -11,8 +11,10 @@
     Permissions-Policy = "geolocation=(), microphone=(), camera=()"
     Content-Security-Policy = "default-src 'self'; img-src 'self' data: https:; media-src 'self' https:; frame-src https://www.youtube.com; script-src 'self' 'unsafe-inline' https://identity.netlify.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src 'self' https://api.netlify.com"
 
-# Keep the admin panel out of Google search results
+# Keep the admin panel out of Google search results, and give the CMS editor
+# a looser Content-Security-Policy since it needs to evaluate JS at runtime.
 [[headers]]
   for = "/admin/*"
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
+    Content-Security-Policy = "default-src 'self' https: data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https: blob:; font-src 'self' https: data:; connect-src 'self' https: wss:; frame-src https:; worker-src 'self' blob:"
