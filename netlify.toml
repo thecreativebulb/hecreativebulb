@@ -9,7 +9,7 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "geolocation=(), microphone=(), camera=()"
-    Content-Security-Policy = "default-src 'self'; img-src 'self' data: https:; media-src 'self' https:; frame-src https://www.youtube.com; script-src 'self' 'unsafe-inline' https://identity.netlify.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src 'self' https://api.netlify.com"
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data: https:; media-src 'self' https:; frame-src https://www.youtube.com https://*.sibforms.com; script-src 'self' 'unsafe-inline' https://identity.netlify.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src 'self' https://api.netlify.com; form-action 'self' https://*.sibforms.com"
 
 # Keep the admin panel out of Google search results, and give the CMS editor
 # a looser Content-Security-Policy since it needs to evaluate JS at runtime.

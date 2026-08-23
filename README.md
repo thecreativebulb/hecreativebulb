@@ -48,5 +48,24 @@ The "Start your project" form on your site is wired to **Netlify Forms** — eve
 
 From then on, every submission both shows up in the **Forms** tab in Netlify and lands in your inbox. If you ever want submissions to go straight to WhatsApp instead of/alongside email, let me know — that needs a small extra integration (e.g. Zapier or a webhook), which I can set up.
 
-## 5. Editing videos, contact info, and text later
+## 6. Newsletter signup
+
+There's now a "Get new work in your inbox" signup band right above the footer. It works the same way as your project-brief form — submissions are captured for free via Netlify Forms.
+
+1. Follow the same steps as section 4 above, but this time turn on a notification for the **newsletter-signup** form (Site configuration → Forms → Form notifications → Add notification → Email notification).
+2. That's enough to start collecting subscribers today, at zero cost.
+
+### Upgrading to real email campaigns (Mailchimp, free)
+
+Netlify Forms only *collects* emails — it can't send newsletters. When you're ready to actually email your subscribers:
+
+1. Sign up free at [mailchimp.com](https://mailchimp.com) (free plan covers up to 500 contacts).
+2. Create an **Audience** (Mailchimp's term for a mailing list).
+3. Go to Audience → Signup forms → Embedded forms, and copy the form's **action URL** (looks like `https://yourname.usX.list-manage.com/subscribe/post?u=...&id=...`).
+4. Send me that URL and I'll switch the newsletter form on your site to submit directly into Mailchimp instead of Netlify — from then on, new signups appear straight in your Mailchimp audience, ready for you to design and send a campaign to whenever you want.
+5. Alternatively, periodically export your collected emails from Netlify Forms (Download as CSV) and import them into Mailchimp manually.
+
+Either way, actually **writing and sending** a newsletter is still something a person (or you asking me to help draft one) needs to do — no tool sends itself.
+
+## 7. Editing videos, contact info, and text later
 Just log into `/admin`, make changes, click **Publish**. That's it — you never need to touch GitHub or code again for text/video/contact updates. For bigger layout or design changes, come back and ask for those directly.
