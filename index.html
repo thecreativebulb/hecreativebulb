@@ -3,22 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Creative Bulb — Photography, Film &amp; Drone Production</title>
-<meta name="description" content="The Creative Bulb shoots real estate, construction, architecture and interiors with 4K photography, cinematic film and drone production.">
+<title>Real Estate &amp; Architectural Photography Mumbai | The Creative Bulb</title>
+<meta name="description" content="The Creative Bulb is a Mumbai-based real estate and architectural photography studio creating photography, cinematic film, drone and construction content for developers, architects and brands across India.">
 <link rel="canonical" href="https://thecreativebulb.netlify.app/">
 
 <!-- Open Graph / social share preview -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="The Creative Bulb — Photography, Film & Drone Production">
-<meta property="og:description" content="4K photography, cinematic film and drone production for real estate, construction and architecture.">
+<meta property="og:title" content="Real Estate & Architectural Photography Mumbai | The Creative Bulb">
+<meta property="og:description" content="Mumbai-based real estate and architectural photography, film and drone production for developers, architects and construction brands across India.">
 <meta property="og:image" content="https://thecreativebulb.netlify.app/assets/logo.webp">
 <meta property="og:url" content="https://thecreativebulb.netlify.app/">
 <meta property="og:site_name" content="The Creative Bulb">
 
 <!-- Twitter card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="The Creative Bulb — Photography, Film & Drone Production">
-<meta name="twitter:description" content="4K photography, cinematic film and drone production for real estate, construction and architecture.">
+<meta name="twitter:title" content="Real Estate & Architectural Photography Mumbai | The Creative Bulb">
+<meta name="twitter:description" content="Mumbai-based real estate and architectural photography, film and drone production for developers, architects and construction brands across India.">
 <meta name="twitter:image" content="https://thecreativebulb.netlify.app/assets/logo.webp">
 
 <!-- Structured data: tells Google this is a real local business -->
@@ -27,21 +27,30 @@
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "The Creative Bulb",
-  "description": "Photography, cinematic film and drone production for real estate, construction and architecture.",
+  "description": "Mumbai-based real estate and architectural photography, film and drone production studio serving developers, architects, interior studios and construction brands across India.",
   "url": "https://thecreativebulb.netlify.app/",
   "logo": "https://thecreativebulb.netlify.app/assets/logo.webp",
   "image": "https://thecreativebulb.netlify.app/assets/logo.webp",
   "email": "hello@thecreativebulb.studio",
-  "telephone": "+91-99999-99999",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Mumbai",
     "addressRegion": "Maharashtra",
     "addressCountry": "IN"
   },
-  "areaServed": "IN",
-  "priceRange": "$$",
-  "sameAs": []
+  "areaServed": [
+    {"@type":"City","name":"Mumbai"},
+    {"@type":"State","name":"Maharashtra"},
+    {"@type":"Country","name":"India"}
+  ],
+  "serviceType": [
+    "Real Estate Photography",
+    "Architectural Photography",
+    "Real Estate Videography",
+    "Drone Photography",
+    "Construction Photography",
+    "Interior Photography"
+  ]
 }
 </script>
 
@@ -185,6 +194,7 @@ button{font-family:inherit;cursor:pointer;}
   letter-spacing:-.01em;
 }
 .hero-head em{font-style:italic;font-weight:500;color:var(--teal-300);}
+.hero-brandline{font-family:var(--font-display);font-size:clamp(20px,2.2vw,30px);line-height:1.25;color:rgba(243,240,233,.86);max-width:760px;margin-top:20px;} .hero-brandline em{color:var(--teal-300);font-style:italic;}
 .hero-sub{
   font-size:17px;line-height:1.65;color:rgba(243,240,233,.72);
   max-width:520px;margin-top:26px;
@@ -275,6 +285,11 @@ button{font-family:inherit;cursor:pointer;}
 .service-name{font-family:var(--font-display);font-weight:600;font-size:21px;line-height:1.25;margin-top:6px;}
 .service-desc{font-size:13.5px;line-height:1.6;color:var(--ink-soft);}
 
+
+.seo-links-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--hairline);border:1px solid var(--hairline);margin-top:10px;}
+.seo-links-grid a{background:var(--paper);padding:22px 24px;font-family:var(--font-mono);font-size:12px;letter-spacing:.02em;display:flex;justify-content:space-between;gap:20px;transition:background .2s ease,color .2s ease;}
+.seo-links-grid a:hover{background:#FFFEFC;color:var(--teal-600);}
+@media(max-width:640px){.seo-links-grid{grid-template-columns:1fr;}}
 
 /* ---------- Showreel ---------- */
 .showreel-frame{position:relative;aspect-ratio:16/9;background:#000;border-radius:2px;overflow:hidden;}
@@ -439,8 +454,9 @@ footer{background:var(--plum-950);color:rgba(243,240,233,.6);padding:64px 0 32px
   <div class="hero-grain"></div>
   <div class="wrap hero-inner">
     <div class="eyebrow on-dark"><span class="bulb-dot"></span><span id="heroEyebrow">Photography &middot; Film &middot; Drone &middot; Real Estate &amp; Architecture</span></div>
-    <h1 class="hero-head" id="heroHead">We don't just shoot spaces.<br>We make them <em>impossible to ignore.</em></h1>
-    <p class="hero-sub" id="heroSub">4K photography, cinematic film and drone production for builders, architects and developers who need their projects to look as good as they were built.</p>
+    <h1 class="hero-head" id="heroHead">Real Estate &amp; Architectural Photography in <em>Mumbai.</em></h1>
+    <p class="hero-brandline">We don&rsquo;t just shoot spaces. We make them <em>impossible to ignore.</em></p>
+    <p class="hero-sub" id="heroSub">Mumbai-based photography, cinematic film and drone production for real estate developers, architects, interior studios and construction brands across India.</p>
     <div class="hero-ctas">
       <a href="#showreel" class="btn btn-solid">View our work</a>
       <a href="#brief" class="btn btn-ghost">Start your project</a>
@@ -459,7 +475,7 @@ footer{background:var(--plum-950);color:rgba(243,240,233,.6);padding:64px 0 32px
   <div class="wrap">
     <div class="section-head reveal">
       <div class="eyebrow"><span class="bulb-dot"></span>Services</div>
-      <h2 class="section-title">Six ways we make a project impossible to scroll past.</h2>
+      <h2 class="section-title">Seven ways we make a project impossible to scroll past.</h2>
       <p class="section-lede">Every service is built to convert attention into inquiries &mdash; for brochures, listing portals, site offices and social feeds alike.</p>
     </div>
   </div>
@@ -467,28 +483,51 @@ footer{background:var(--plum-950);color:rgba(243,240,233,.6);padding:64px 0 32px
     <div class="services-grid reveal">
       <div class="service-card">
         <div class="service-top"><span class="service-num">01</span><span class="bulb-dot"></span></div>
-        <div><div class="service-name">Architectural Photography</div><p class="service-desc">Every elevation, lobby and facade lit and framed for brochure, hoarding and print.</p></div>
+        <div><a href="/real-estate-photography-mumbai/" class="service-name">Real Estate Photography</a><p class="service-desc">High-end property photography for developers, brokers, listing portals, brochures and launch campaigns.</p></div>
       </div>
       <div class="service-card">
         <div class="service-top"><span class="service-num">02</span><span class="bulb-dot"></span></div>
-        <div><div class="service-name">Cinematic Real Estate Film</div><p class="service-desc">Walkthrough films that sell the feeling of a space, not just its floor plan.</p></div>
+        <div><a href="/architectural-photography-mumbai/" class="service-name">Architectural Photography</a><p class="service-desc">Every elevation, lobby and facade lit and framed for brochure, hoarding and print.</p></div>
       </div>
       <div class="service-card">
         <div class="service-top"><span class="service-num">03</span><span class="bulb-dot"></span></div>
-        <div><div class="service-name">Aerial &amp; Drone Production</div><p class="service-desc">Site progress, land parcels and master-plan visuals shot from the air, licensed and insured.</p></div>
+        <div><a href="/real-estate-videography-mumbai/" class="service-name">Cinematic Real Estate Film</a><p class="service-desc">Walkthrough films that sell the feeling of a space, not just its floor plan.</p></div>
       </div>
       <div class="service-card">
         <div class="service-top"><span class="service-num">04</span><span class="bulb-dot"></span></div>
-        <div><div class="service-name">Construction Progress Diaries</div><p class="service-desc">Scheduled monthly documentation that builds a visual record from foundation to handover.</p></div>
+        <div><a href="/drone-photography-mumbai/" class="service-name">Aerial &amp; Drone Production</a><p class="service-desc">Site progress, land parcels and master-plan visuals shot from the air, licensed and insured.</p></div>
       </div>
       <div class="service-card">
         <div class="service-top"><span class="service-num">05</span><span class="bulb-dot"></span></div>
-        <div><div class="service-name">Interior &amp; Show-Flat Styling Shoots</div><p class="service-desc">Staged model apartments and interiors shot for the way buyers actually decide.</p></div>
+        <div><a href="/construction-photography-mumbai/" class="service-name">Construction Progress Diaries</a><p class="service-desc">Scheduled monthly documentation that builds a visual record from foundation to handover.</p></div>
       </div>
       <div class="service-card">
         <div class="service-top"><span class="service-num">06</span><span class="bulb-dot"></span></div>
+        <div><a href="/interior-photography-mumbai/" class="service-name">Interior &amp; Show-Flat Styling Shoots</a><p class="service-desc">Staged model apartments and interiors shot for the way buyers actually decide.</p></div>
+      </div>
+      <div class="service-card">
+        <div class="service-top"><span class="service-num">07</span><span class="bulb-dot"></span></div>
         <div><div class="service-name">Social Reels &amp; Short-Form Content</div><p class="service-desc">Vertical cuts built for Instagram and YouTube, delivered alongside every shoot.</p></div>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section seo-intro">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span class="bulb-dot"></span>Real Estate &amp; Architecture</div>
+      <h2 class="section-title">Visual production for property brands in Mumbai and across India.</h2>
+      <p class="section-lede">The Creative Bulb creates professional real estate photography, architectural photography, cinematic property films, aerial drone content, construction progress photography and interior photography. We work with developers, architects, interior designers, construction companies and marketing teams that need visual content built for sales, presentations, brochures, websites and social media.</p>
+    </div>
+    <div class="seo-links-grid">
+      <a href="/real-estate-photography-mumbai/">Real Estate Photography Mumbai <span>→</span></a>
+      <a href="/architectural-photography-mumbai/">Architectural Photography Mumbai <span>→</span></a>
+      <a href="/real-estate-videography-mumbai/">Real Estate Videography Mumbai <span>→</span></a>
+      <a href="/drone-photography-mumbai/">Drone Photography Mumbai <span>→</span></a>
+      <a href="/construction-photography-mumbai/">Construction Photography Mumbai <span>→</span></a>
+      <a href="/interior-photography-mumbai/">Interior Photography Mumbai <span>→</span></a>
     </div>
   </div>
 </section>
@@ -569,7 +608,6 @@ footer{background:var(--plum-950);color:rgba(243,240,233,.6);padding:64px 0 32px
         <h2 class="section-title">Tell us about the project. We'll come back with a plan and a quote.</h2>
         <p class="section-lede">A few details now means a sharper quote later &mdash; no back-and-forth needed.</p>
         <div class="direct-contact">
-          <div class="dc-row"><b>WhatsApp</b><a id="waLink" href="https://wa.me/919999999999" target="_blank" rel="noopener">+91 99999 99999</a></div>
           <div class="dc-row"><b>Email</b><a id="emailLink" href="mailto:hello@thecreativebulb.studio">hello@thecreativebulb.studio</a></div>
           <div class="dc-row"><b>Studio</b><span id="locationText">Mumbai, Maharashtra &mdash; shoots across India</span></div>
         </div>
@@ -659,6 +697,8 @@ footer{background:var(--plum-950);color:rgba(243,240,233,.6);padding:64px 0 32px
         <a href="#services">Services</a>
         <a href="#about">About</a>
         <a href="#journal">Journal</a>
+        <a href="/real-estate-photography-mumbai/">Real Estate Photography</a>
+        <a href="/architectural-photography-mumbai/">Architectural Photography</a>
       </div>
       <div class="foot-col">
         <h5>Work with us</h5>
@@ -669,15 +709,15 @@ footer{background:var(--plum-950);color:rgba(243,240,233,.6);padding:64px 0 32px
         <h5>Contact</h5>
         <span id="footLocation">Mumbai, India</span>
         <a id="footEmail" href="mailto:hello@thecreativebulb.studio">hello@thecreativebulb.studio</a>
-        <a id="footWa" href="https://wa.me/919999999999" target="_blank" rel="noopener">+91 99999 99999</a>
+        
       </div>
     </div>
     <div class="foot-bottom">
       <p>&copy; 2026 The Creative Bulb. All rights reserved.</p>
       <div class="foot-social">
-        <a href="#" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
-        <a href="#" aria-label="YouTube"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9L15 12L10 15V9Z" fill="currentColor" stroke="none"/></svg></a>
-        <a href="#" aria-label="LinkedIn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="7" y1="10" x2="7" y2="17"/><circle cx="7" cy="7" r="0.5" fill="currentColor"/><path d="M11 17V10M11 12.5C11 10.8 12.3 10 13.5 10C15 10 16 11 16 13V17"/></svg></a>
+        <span aria-label="Instagram" class="social-placeholder"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></span>
+        <span aria-label="YouTube" class="social-placeholder"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9L15 12L10 15V9Z" fill="currentColor" stroke="none"/></svg></span>
+        <span aria-label="LinkedIn" class="social-placeholder"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="7" y1="10" x2="7" y2="17"/><circle cx="7" cy="7" r="0.5" fill="currentColor"/><path d="M11 17V10M11 12.5C11 10.8 12.3 10 13.5 10C15 10 16 11 16 13V17"/></svg></span>
       </div>
     </div>
   </div>
@@ -768,7 +808,7 @@ document.addEventListener('DOMContentLoaded', function(){
       try{
         if(d.hero){
           if(d.hero.eyebrow) document.getElementById('heroEyebrow').textContent=d.hero.eyebrow;
-          if(d.hero.headline_main && d.hero.headline_em) document.getElementById('heroHead').innerHTML=d.hero.headline_main+'<br>We make them <em>'+d.hero.headline_em+'</em>';
+          if(d.hero.headline_main && d.hero.headline_em) document.querySelector('.hero-brandline').innerHTML=d.hero.headline_main+' <em>'+d.hero.headline_em+'</em>';
           if(d.hero.subtext) document.getElementById('heroSub').textContent=d.hero.subtext;
           var statsHTML='';
           for(var i=1;i<=4;i++){
@@ -782,8 +822,6 @@ document.addEventListener('DOMContentLoaded', function(){
           if(d.about.paragraph2) document.getElementById('aboutP2').textContent=d.about.paragraph2;
         }
         if(d.contact){
-          if(d.contact.whatsapp_link){document.getElementById('waLink').href=d.contact.whatsapp_link;document.getElementById('footWa').href=d.contact.whatsapp_link;}
-          if(d.contact.whatsapp_display){document.getElementById('waLink').textContent=d.contact.whatsapp_display;document.getElementById('footWa').textContent=d.contact.whatsapp_display;}
           if(d.contact.email){
             document.getElementById('emailLink').href='mailto:'+d.contact.email;
             document.getElementById('emailLink').textContent=d.contact.email;
