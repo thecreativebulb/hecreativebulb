@@ -23,3 +23,10 @@
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+# Prevent the accidentally nested duplicate project copy from competing with
+# the root website in search results.
+[[headers]]
+  for = "/creative-bulb-site/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"

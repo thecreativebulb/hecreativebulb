@@ -69,3 +69,13 @@ Either way, actually **writing and sending** a newsletter is still something a p
 
 ## 7. Editing videos, contact info, and text later
 Just log into `/admin`, make changes, click **Publish**. That's it — you never need to touch GitHub or code again for text/video/contact updates. For bigger layout or design changes, come back and ask for those directly.
+
+
+## Growth version updates
+- Added a dedicated real-estate-developer landing page.
+- Made the three homepage Journal cards open crawlable article pages.
+- Added three original, service-relevant articles with internal links and enquiry CTAs.
+- Expanded the XML sitemap to include all public service, developer and article URLs.
+- Added an internal linking path from the homepage to the developer offer and project enquiry form.
+- Replaced empty social-icon placeholders with useful on-site/contact links. Add your real social profile URLs once confirmed; don't publish guessed handles.
+- Newsletter messaging no longer claims a confirmed subscription immediately. Because the form posts to a third-party provider in a hidden iframe, confirmation should be verified with a real test submission before relying on it.

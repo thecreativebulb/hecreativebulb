@@ -340,7 +340,7 @@ button{font-family:inherit;cursor:pointer;}
 /* ---------- Journal ---------- */
 .journal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;}
 @media(max-width:900px){.journal-grid{grid-template-columns:1fr;}}
-.journal-card{border-top:1px solid var(--hairline);padding-top:20px;}
+.journal-card{color:inherit;text-decoration:none;display:block;border-top:1px solid var(--hairline);padding-top:20px;}
 .journal-tag{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal-600);}
 .journal-card h4{font-family:var(--font-display);font-weight:600;font-size:19px;margin-top:12px;line-height:1.3;}
 .journal-card p{font-size:13.5px;color:var(--ink-soft);margin-top:10px;line-height:1.6;}
@@ -419,6 +419,21 @@ footer{background:var(--plum-950);color:rgba(243,240,233,.6);padding:64px 0 32px
 #mobile-menu.open{transform:translateY(0);}
 #mobile-menu a{font-family:var(--font-display);font-size:28px;color:var(--off-white);margin-bottom:22px;font-weight:500;}
 #mobile-menu .close-btn{position:absolute;top:24px;right:28px;background:none;border:none;color:var(--off-white);font-size:28px;}
+
+
+/* Lead-generation block */
+.developer-cta{background:var(--plum-950);color:var(--off-white);}
+.developer-cta .section-title{color:var(--off-white);max-width:760px;}
+.developer-cta .section-lede{color:rgba(243,240,233,.72);max-width:650px;}
+.developer-cta-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:64px;align-items:center;}
+.developer-cta .btn-ghost{color:var(--off-white);}
+.developer-proof{border:1px solid var(--hairline-light);padding:28px;}
+.developer-proof>div{display:flex;align-items:center;gap:18px;padding:15px 0;border-bottom:1px solid var(--hairline-light);}
+.developer-proof b{font:12px var(--font-mono);color:var(--teal-300);}
+.developer-proof span{font-size:15px;}
+.developer-proof p{font-size:13px;line-height:1.7;color:rgba(243,240,233,.65);margin-top:20px;}
+@media(max-width:760px){.developer-cta-grid{grid-template-columns:1fr;gap:32px;}}
+
 </style>
 </head>
 <body>
@@ -429,7 +444,8 @@ footer{background:var(--plum-950);color:rgba(243,240,233,.6);padding:64px 0 32px
       <img src="/assets/logo.webp" alt="The Creative Bulb" class="nav-logo">
     </a>
     <ul class="nav-links">
-      <li><a href="#services">Services</a></li>
+      <li><a href="#services">Services</a>
+        <a href="/real-estate-developers-mumbai/">For developers</a></li>
       <li><a href="#showreel">Showreel</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#journal">Journal</a></li>
@@ -532,6 +548,28 @@ footer{background:var(--plum-950);color:rgba(243,240,233,.6);padding:64px 0 32px
   </div>
 </section>
 
+
+
+<section class="section developer-cta" id="for-developers">
+  <div class="wrap developer-cta-grid">
+    <div>
+      <div class="eyebrow"><span class="bulb-dot"></span> For property teams</div>
+      <h2 class="section-title">One production partner. A complete launch library.</h2>
+      <p class="section-lede">Photography, cinematic film, aerial coverage and short-form edits planned together for property launches, brochures, websites and social campaigns.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-solid" href="/real-estate-developers-mumbai/">Explore developer services <span aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost" href="#brief">Request a project proposal</a>
+      </div>
+    </div>
+    <div class="developer-proof">
+      <div><b>01</b><span>Brief &amp; shot plan</span></div>
+      <div><b>02</b><span>Photo, film &amp; aerial production</span></div>
+      <div><b>03</b><span>Assets prepared for campaign use</span></div>
+      <p>Have a project in planning? Share the location, launch date and deliverables. We'll help scope the right production.</p>
+    </div>
+  </div>
+</section>
+
 <section id="showreel" class="section">
   <div class="wrap">
     <div class="section-head reveal">
@@ -578,24 +616,24 @@ footer{background:var(--plum-950);color:rgba(243,240,233,.6);padding:64px 0 32px
       <p class="section-lede">Short reads on shooting real estate, construction and architecture well.</p>
     </div>
     <div class="journal-grid reveal">
-      <div class="journal-card">
+      <a class="journal-card" href="/journal/golden-hour-property-photography/">
         <span class="journal-tag">Production</span>
         <h4>Why golden-hour shoots cost more &mdash; and why they're worth it</h4>
         <p>The 40-minute window that changes how a facade photographs, and how to plan a shoot day around it.</p>
-        <span class="rd">Read the article</span>
-      </div>
-      <div class="journal-card">
+        <span class="rd">Read the article →</span>
+      </a>
+      <a class="journal-card" href="/journal/drone-shoot-planning/">
         <span class="journal-tag">Drone</span>
-        <h4>What a DGCA-compliant drone shoot actually requires</h4>
-        <p>Permissions, no-fly zones and the paperwork builders should ask their photographer for.</p>
-        <span class="rd">Read the article</span>
-      </div>
-      <div class="journal-card">
+        <h4>What a compliant drone shoot actually requires</h4>
+        <p>Permissions, no-fly zones and the paperwork project teams should confirm before a shoot.</p>
+        <span class="rd">Read the article →</span>
+      </a>
+      <a class="journal-card" href="/journal/property-brochure-shot-list/">
         <span class="journal-tag">Marketing</span>
         <h4>The three shots every listing brochure is missing</h4>
-        <p>Beyond the hero exterior &mdash; the frames that actually move a buyer to inquire.</p>
-        <span class="rd">Read the article</span>
-      </div>
+        <p>Beyond the hero exterior — the frames that help buyers understand a property.</p>
+        <span class="rd">Read the article →</span>
+      </a>
     </div>
   </div>
 </section>
@@ -714,10 +752,9 @@ footer{background:var(--plum-950);color:rgba(243,240,233,.6);padding:64px 0 32px
     </div>
     <div class="foot-bottom">
       <p>&copy; 2026 The Creative Bulb. All rights reserved.</p>
-      <div class="foot-social">
-        <span aria-label="Instagram" class="social-placeholder"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></span>
-        <span aria-label="YouTube" class="social-placeholder"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9L15 12L10 15V9Z" fill="currentColor" stroke="none"/></svg></span>
-        <span aria-label="LinkedIn" class="social-placeholder"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><line x1="7" y1="10" x2="7" y2="17"/><circle cx="7" cy="7" r="0.5" fill="currentColor"/><path d="M11 17V10M11 12.5C11 10.8 12.3 10 13.5 10C15 10 16 11 16 13V17"/></svg></span>
+      <div class="foot-social" aria-label="Contact and share">
+        <a href="mailto:hello@thecreativebulb.studio?subject=Project%20enquiry%20for%20The%20Creative%20Bulb" aria-label="Email The Creative Bulb">Email us</a>
+        <a href="/real-estate-developers-mumbai/">Work with us</a>
       </div>
     </div>
   </div>
@@ -837,21 +874,42 @@ document.addEventListener('DOMContentLoaded', function(){
     .catch(function(){ /* file not reachable (e.g. opened locally) — defaults already shown */ });
 
   var newsletterForm=document.getElementById('newsletterForm');
+  var newsletterFrame=document.querySelector('iframe[name="brevoHiddenFrame"]');
+  var newsletterPending=false;
   newsletterForm.addEventListener('submit',function(){
     var msg=document.getElementById('newsletterMsg');
     var btn=newsletterForm.querySelector('button[type="submit"]');
     var emailVal=document.getElementById('newsletterEmail').value.trim();
     if(!emailVal){return;}
+    newsletterPending=true;
     btn.disabled=true;
-    // The form submits normally into the hidden iframe (cross-origin, so we
-    // can't read the real response) — show a confirmation shortly after.
+    btn.textContent='Submitting…';
+    msg.textContent='Submitting your email…';
+    msg.className='newsletter-msg show';
+    // Do not claim success before the provider responds. The cross-origin
+    // iframe cannot expose the provider response, so tell users to check for
+    // the provider's confirmation email instead of showing a false success.
     setTimeout(function(){
-      msg.textContent='Subscribed — thanks!';
-      msg.className='newsletter-msg show ok';
-      newsletterForm.reset();
+      if(!newsletterPending)return;
+      msg.textContent='If your submission was accepted, check your inbox for a confirmation email. If you do not receive one, please contact us by email.';
+      msg.className='newsletter-msg show';
       btn.disabled=false;
-    }, 900);
+      btn.textContent='Subscribe';
+      newsletterPending=false;
+    },2500);
   });
+  if(newsletterFrame){
+    newsletterFrame.addEventListener('load',function(){
+      if(!newsletterPending)return;
+      var msg=document.getElementById('newsletterMsg');
+      var btn=newsletterForm.querySelector('button[type="submit"]');
+      msg.textContent='Thanks — please check your inbox for a confirmation email.';
+      msg.className='newsletter-msg show ok';
+      btn.disabled=false;
+      btn.textContent='Subscribe';
+      newsletterPending=false;
+    });
+  }
 
   var form=document.getElementById('briefForm');
   form.addEventListener('submit',function(e){

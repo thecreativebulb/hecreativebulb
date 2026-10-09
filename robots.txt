@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
+Disallow: /creative-bulb-site/
 
 Sitemap: https://thecreativebulb.netlify.app/sitemap.xml
